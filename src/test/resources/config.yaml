@@ -1,0 +1,24 @@
+{% set testVar = "C:\\Users\\someuser\\testVar" %}
+server:
+#  softNofileLimit: 1000
+#  hardNofileLimit: 1000
+  applicationConnectors:
+    - type: http
+      port: 0
+    #this requires the alpn-boot library on the JVM's boot classpath
+    #- type: h2
+    #  port: 8445
+    #  keyStorePath: example.keystore
+    #  keyStorePassword: example
+    #  validateCerts: false
+    #  validatePeers: false
+  adminConnectors:
+    - type: http
+      port: 0
+
+testProperty: testValue
+{% autoescape 'none' %}
+testUnquotedProperty: {{ testVar }}
+{% endautoescape %}
+testQuotedProperty: "{{ testVar }}"
+testIntegerProperty: {{ 234 }}
