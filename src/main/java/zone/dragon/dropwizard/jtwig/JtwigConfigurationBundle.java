@@ -26,6 +26,7 @@ import org.jtwig.environment.EnvironmentConfigurationBuilder;
 import org.jtwig.escape.EscapeEngine;
 
 import com.fasterxml.jackson.core.io.JsonStringEncoder;
+import com.fasterxml.jackson.core.util.BufferRecyclers;
 
 import io.dropwizard.Bundle;
 import io.dropwizard.setup.Bootstrap;
@@ -50,7 +51,7 @@ public class JtwigConfigurationBundle implements Bundle {
     /**
      * JSON encoder instance used to escape YAML strings
      */
-    private static final JsonStringEncoder ENCODER = JsonStringEncoder.getInstance();
+    private static final JsonStringEncoder ENCODER = BufferRecyclers.getJsonStringEncoder();
     /**
      * Escaping engine for use with Jtwig that escapes YAML strings
      */

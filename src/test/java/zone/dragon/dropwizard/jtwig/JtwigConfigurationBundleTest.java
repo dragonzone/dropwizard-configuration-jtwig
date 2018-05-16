@@ -17,18 +17,20 @@
 
 package zone.dragon.dropwizard.jtwig;
 
-import org.junit.ClassRule;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import io.dropwizard.Application;
 import io.dropwizard.Configuration;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
-import io.dropwizard.testing.junit.DropwizardAppRule;
+import io.dropwizard.testing.junit5.DropwizardAppExtension;
+import io.dropwizard.testing.junit5.DropwizardExtensionsSupport;
 import lombok.Data;
 
 import static org.assertj.core.api.Java6Assertions.assertThat;
 
+@ExtendWith(DropwizardExtensionsSupport.class)
 public class JtwigConfigurationBundleTest {
 
     public static class TestApp extends Application<TestConfig> {
@@ -55,8 +57,7 @@ public class JtwigConfigurationBundleTest {
         private int testIntegerProperty;
     }
 
-    @ClassRule
-    public static final DropwizardAppRule<TestConfig> APP_RULE = new DropwizardAppRule<>(TestApp.class, "src/test/resources/config.yaml");
+    public static final DropwizardAppExtension<TestConfig> APP_RULE = new DropwizardAppExtension<>(TestApp.class, "src/test/resources/config.yaml");
 
     @Test
     public void testQuotedProperty() {
