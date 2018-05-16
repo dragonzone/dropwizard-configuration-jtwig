@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -11,7 +10,7 @@
 
     <groupId>zone.dragon.dropwizard</groupId>
     <artifactId>dropwizard-configuration-jtwig</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1.4-b6fb6b</version>
 
     <name>Dropwizard :: Configuration :: Jtwig Templates</name>
     <description>
@@ -23,7 +22,7 @@
         <connection>scm:git:http://github.com/dragonzone/dropwizard-configuration-jtwig.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/dragonzone/dropwizard-configuration-jtwig.git</developerConnection>
         <url>https://github.com/dragonzone/dropwizard-configuration-jtwig/tree/master</url>
-        <tag>HEAD</tag>
+        <tag>dropwizard-configuration-jtwig-1.1.4</tag>
     </scm>
 
     <licenses>
